@@ -14,9 +14,9 @@ struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBat
     int presentCapacity = presentCapacities[i];
     double sohPercentage = 100.0 * presentCapacity / ratedCapacity;
 
-    if (sohPercentage > 80.0 && sohPercentage <= 100.0) {
+    if (sohPercentage >= 80.0) {
       counts.healthy++;
-    } else if (sohPercentage > 65.0 && sohPercentage <= 80.0) {
+    } else if (sohPercentage >=65.0 ) {
       counts.exchange++;
     } else {
       counts.failed++;
